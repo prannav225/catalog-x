@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=boska@200,300,400,500,700,900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Boska", serif;
+
+  /* Brand Colors */
+  --bg-light: #fbfaf8;
+  --bg-dark: #1c1d21;
+  --brand-primary: #392759;
+  --brand-accent: #f9a03f;
+
+  /* Light Theme Defaults */
+  --bg-color: var(--bg-light);
+  --text-color: #1c1d21;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --surface-color: #ffffff;
+  --muted-color: #6b7280;
+  --primary-color: var(--brand-primary);
+  --accent-color: var(--brand-accent);
+}
+
+.dark {
+  --bg-color: var(--bg-dark);
+  --text-color: #fbfaf8;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --surface-color: #242529;
+  --muted-color: #9ca3af;
+  /* Use accent as primary in dark mode for better visibility */
+  --primary-color: var(--brand-accent);
+  --accent-color: var(--brand-primary);
+}
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --color-primary: var(--primary-color);
+  --color-accent: var(--accent-color);
+  --color-bg: var(--bg-color);
+  --color-surface: var(--surface-color);
+  --color-border: var(--border-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Minimalist Components */
+.card-base {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* Transitions */
+.page-transition {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Grid Pattern */
+.bg-grid {
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(200%);
+  }
+}
