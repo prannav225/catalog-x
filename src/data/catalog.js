@@ -1,4 +1,4 @@
-import rawData from './Data.json';
+import rawData from "./data.json";
 
 export const catalogData = rawData;
 
