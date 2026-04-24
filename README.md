@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Core Features
+## Core Features
 
 ### 1. Dynamic Category Architecture
 
@@ -31,7 +31,7 @@ The system handles inconsistent external image URLs via a reactive fail-safe mec
 
 ---
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 - **Framework**: React 19
 - **Build Tool**: Vite
@@ -42,7 +42,7 @@ The system handles inconsistent external image URLs via a reactive fail-safe mec
 
 ---
 
-## ⚡ Performance & Optimization
+## Performance & Optimization
 
 - **Tailwind v4 Engine**: Leverages the latest CSS-variable driven styling engine for ultra-fast build times and minimal runtime overhead.
 - **Minimalist Geometry**: Moves away from generic "AI-generated" aesthetics by using sharp `rounded-sm` corners and structured border-based layouts.
@@ -51,7 +51,7 @@ The system handles inconsistent external image URLs via a reactive fail-safe mec
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 - `/src/components`: Reusable UI components (Navbar, ItemCard, etc.)
 - `/src/pages`: Main page layouts (HomePage, ItemDetailPage)
