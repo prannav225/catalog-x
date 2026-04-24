@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
+import { Analytics } from '@vercel/analytics/react';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ItemDetailPage = lazy(() => import('./pages/ItemDetailPage'));
@@ -19,9 +20,9 @@ export default function App() {
               <Route path="*" element={<HomePage />} />
             </Routes>
           </Suspense>
+          <Analytics />
         </div>
       </BrowserRouter>
     </ThemeProvider>
   );
 }
-
