@@ -1,9 +1,7 @@
-import { getCategories } from '../data/catalog';
-import { useTheme } from '../context/ThemeContext';
+import { getCategories } from "../data/catalog";
 
 export default function CategoryNav() {
   const categories = getCategories();
-  const { theme } = useTheme();
 
   const scrollTo = (id) => {
     const element = document.getElementById(`category-${id.toLowerCase()}`);
@@ -16,7 +14,7 @@ export default function CategoryNav() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
