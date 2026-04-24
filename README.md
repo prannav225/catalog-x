@@ -1,4 +1,4 @@
-# CatalogX // Dynamic Multi-Category Archive
+# CatalogX | Dynamic Multi-Category Archive
 
 **CatalogX** is a high-fidelity, data-driven product catalog system built with React and Tailwind CSS. It is designed to serve as a sophisticated industrial directory for diverse product categories, ranging from automotive assets to technological hardware.
 
