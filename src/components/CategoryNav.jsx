@@ -1,23 +1,18 @@
 import { getCategories } from "../data/catalog";
+import { useCallback } from "react";
 
 export default function CategoryNav() {
   const categories = getCategories();
 
-  const scrollTo = (id) => {
+  const scrollTo = useCallback((id) => {
     const element = document.getElementById(`category-${id.toLowerCase()}`);
     if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
+      element.scrollIntoView({
         behavior: "smooth",
+        block: "start", // Aligns the top of the element (honoring scroll-margin-top)
       });
     }
-  };
+  }, []);
 
   return (
     <nav
